@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CardContainer from './CardContainer';
+import CreateContainer from './CreateContainer';
 
 class SushiContainer extends Component {
   state = {
@@ -16,11 +17,19 @@ class SushiContainer extends Component {
       .then(json => this.setState({ rolls: json }));
   };
 
+  updateRolls = json => {
+    const newRolls = this.state.rolls;
+    newRolls.push(json);
+    this.setState({ rolls: newRolls });
+  };
+
   render() {
-    console.log(this.state.rolls);
+    const cRolls = this.state.rolls;
+    console.log(cRolls);
     return (
       <div className="sushi-container">
-        {this.state.rolls.map(roll => <CardContainer key={roll.id} rollData={roll} />)}
+        {cRolls.map(roll => <CardContainer key={roll.id} rollData={roll} />)}
+        <CreateContainer updateRolls={this.updateRolls} />
       </div>
     );
   }

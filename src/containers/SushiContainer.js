@@ -25,7 +25,6 @@ class SushiContainer extends Component {
 
   render() {
     const cRolls = this.state.rolls;
-    console.log(cRolls);
     return (
       <div className="sushi-container">
         {cRolls.map(roll => <CardContainer key={roll.id} rollData={roll} />)}

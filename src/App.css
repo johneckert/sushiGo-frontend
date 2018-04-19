@@ -2,41 +2,122 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-image: url('./images/bg-img.png');
+  background-size: cover;
+  background-repeat: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
 .app {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.navbar {
-  color: #ffffff;
-  background-color: #000000;
+/* Phones */
+@media only screen and (max-width: 767px) {
+  .sushi-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 40px 0 40px 0;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 104px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .navbar > h1 {
+    line-height: 104px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #ffffff;
+  }
 }
 
-.navbar > h1 {
-  font-family: Montserrat;
-  font-size: 64px;
-  font-weight: 900;
-  letter-spacing: 1.3px;
-  text-align: left;
-  color: #ffffff;
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .sushi-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 40px 0 40px 0;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 138px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .navbar > h1 {
+    line-height: 138px;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #ffffff;
+  }
 }
 
-.sushi-container {
-  display: grid;
-  grid-template-columns: [one] 25% [two] 25% [three] 25% [four] 25% [end];
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  background-image: url('./images/bg-img.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+/* laptop */
+@media only screen and (min-width: 1024px) {
+  .sushi-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 40px 0 40px 0;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 138px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .navbar > h1 {
+    line-height: 138px;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #ffffff;
+  }
 }
 
 .card {
+  width: 220px;
+  height: 200px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  width: 220px;
-  height: 200px;
   border-radius: 5px;
   background-color: #74badb;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -50,13 +131,12 @@
 
 .roll-title {
   width: 100%;
-  height: 53px; /* needs to change based on display*/
+  height: 53px;
   font-family: Montserrat;
   font-size: 20px;
-  font-weight: 900;
-  line-height: 53px; /* needs to change based on display*/
+  font-weight: 700;
+  line-height: 53px;
   letter-spacing: 0.4px;
-  text-align: left;
   color: #ffffff;
   background-color: #000000;
   text-align: center;

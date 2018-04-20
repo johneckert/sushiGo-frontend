@@ -12,7 +12,7 @@ class SushiContainer extends Component {
   }
 
   getRolls = () => {
-    fetch('https://sushigo-backend.herokuapp.com/sushi')
+    fetch('https://sushigo-backend.herokuapp.com/')
       .then(res => res.json())
       .then(json => this.setState({ rolls: json }));
   };

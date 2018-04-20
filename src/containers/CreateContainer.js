@@ -17,7 +17,7 @@ class CreateContainer extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    fetch('https://sushigo-backend.herokuapp.com/', {
+    fetch('https://sushigo-backend.herokuapp.com/sushi', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

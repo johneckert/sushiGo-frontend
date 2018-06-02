@@ -12,7 +12,7 @@ const fakeRollData = {
 const component = TestRenderer.create(<CardBack rollData={fakeRollData} />);
 const ingredients = component.toJSON()['children'][0]['children'];
 const firstIngredientName = ingredients[0]['children'][0];
-console.log(component.toJSON());
+
 describe('CardBack', () => {
   test('renders', () => {
     expect(component).toBeDefined();

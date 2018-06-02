@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "jest": "^23.1.0",
     "jest-cli": "^21.2.1",
-    "react-test-renderer": "^16.4.0"
+    "react-test-renderer": "^16.4.0",
+    "regenerator-runtime": "^0.11.1"
   }
 }

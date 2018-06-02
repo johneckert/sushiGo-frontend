@@ -1,4 +1,6 @@
-// const sushiContainer = require('../containers/SushiContainer');
+// import React from 'react';
+// import SushiContainer from '../containers/SushiContainer';
+// import renderer from 'react-test-renderer';
 
 describe('Sushi Container', () => {
   test('knows that 2 and 2 make 4', () => {

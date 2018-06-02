@@ -8,10 +8,20 @@ const fakeRollData = {
   name: 'Spicy Tuna Roll',
   ingredients: 'Tuna, Chili sauce, Nori, Rice'
 };
+const component = TestRenderer.create(<CardBack rollData={fakeRollData} />);
+const ingredients = component.toJSON()['children'][0]['children'];
+const firstIngredientName = ingredients[0]['children'][0];
 
-// describe('CardBack', () => {
-test('renders', () => {
-  const component = TestRenderer.create(<CardBack rollData={fakeRollData} />);
-  expect(component).toBeDefined();
+describe('CardBack', () => {
+  test('renders', () => {
+    expect(component).toBeDefined();
+  });
+
+  test('renders the correct number of ingredients', () => {
+    expect(ingredients).toHaveLength(4);
+  });
+
+  test('renders ingredient name correctly', () => {
+    expect(firstIngredientName).toEqual('Tuna');
+  });
 });
-// });

@@ -1,7 +1,17 @@
-// const sushiContainer = require('../containers/SushiContainer');
+import React from 'react';
+import CardFront from '../components/CardFront';
+import renderer from 'react-test-renderer';
 
-describe('Sushi Container', () => {
-  test('knows that 2 and 2 make 4', () => {
-    expect(2 + 2).toBe(4);
+const fakeRollData = {
+  id: '1',
+  imageNumber: '8',
+  name: 'Spicy Tuna Roll',
+  ingredients: 'Tuna, Chili sauce, Nori, Rice'
+};
+
+describe('CardFront', () => {
+  it('renders correctly', () => {
+    const component = renderer.create(<CardFront rollData={fakeRollData} />);
+    expect(component).toMatchSnapshot();
   });
 });

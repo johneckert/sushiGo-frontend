@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFront renders correctly 1`] = `
+<img
+  alt="sushi 8"
+  src={
+    Object {
+      "process": [Function],
+    }
+  }
+/>
+`;

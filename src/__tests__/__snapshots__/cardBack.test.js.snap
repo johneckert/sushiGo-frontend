@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBack renders correctly 1`] = `
+<div
+  className="card back"
+>
+  <ul>
+    <li>
+      Tuna
+    </li>
+    <li>
+      Chili sauce
+    </li>
+    <li>
+      Nori
+    </li>
+    <li>
+      Rice
+    </li>
+  </ul>
+  <div
+    className="line"
+  />
+</div>
+`;

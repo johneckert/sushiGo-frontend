@@ -1,7 +1,10 @@
-// const sushiContainer = require('../containers/SushiContainer');
+import React from 'react';
+import Nav from '../components/Nav';
+import renderer from 'react-test-renderer';
 
-describe('Sushi Container', () => {
-  test('knows that 2 and 2 make 4', () => {
-    expect(2 + 2).toBe(4);
+describe('Nav', () => {
+  it('renders correctly', () => {
+    const component = renderer.create(<Nav />);
+    expect(component).toMatchSnapshot();
   });
 });

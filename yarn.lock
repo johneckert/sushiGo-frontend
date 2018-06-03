@@ -4704,6 +4704,10 @@ jest-snapshot@^23.0.1:
     natural-compare "^1.4.0"
     pretty-format "^23.0.1"
 
+jest-transform-stub@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/jest-transform-stub/-/jest-transform-stub-1.0.0.tgz#e4e941454f31a8bbc4db96b31f46a08b294372b1"
+
 jest-util@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-20.0.3.tgz#0c07f7d80d82f4e5a67c6f8b9c3fe7f65cfd32ad"

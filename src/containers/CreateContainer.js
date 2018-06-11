@@ -23,7 +23,11 @@ class CreateContainer extends Component {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name: this.state.name, ingredients: this.combineIngredients() })
+      body: JSON.stringify({
+        name: this.state.name,
+        imageNumber: `${Math.floor(Math.random() * 11) + 1}`,
+        ingredients: this.combineIngredients(),
+      })
     })
       .then(res => res.json())
       .then(json => {
